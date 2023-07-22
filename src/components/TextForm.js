@@ -4,10 +4,12 @@ export default function TextForm(props) {
 const handleUpClick=()=>{
     let newText=text.toUpperCase();
     setText(newText);
+    props.showAlert("converted to uppercase","success ");
 }
 const handleLoClick=()=>{
     let newText=text.toLowerCase();
     setText(newText);
+    props.showAlert("converted to lowercase","success ");
 }
 const handleOnChange=(event)=>{
     setText(event.target.value); 
@@ -18,16 +20,20 @@ const handleSpace=()=>{
   let newText= text.split(/[ ]+/);
   //split text to array at one or more spaces and then join the array using join with one space
   setText(newText.join(" "));
+  
+  props.showAlert("extra spaces removed","success ");
 }
 
 const handleClearClick=()=>{
   setText("");
+  props.showAlert("text cleared","success ");
 }
 
 const handleCopy=()=>{
   var text=document.getElementById("myBox");
   text.select();
   navigator.clipboard.writeText(text.value);
+  props.showAlert("text copied to clipboard","success ");
 }
 
 
