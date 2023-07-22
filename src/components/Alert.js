@@ -8,10 +8,12 @@ function Alert(props) {
 }
   return(
 // props.alert is checked first if it is false next div is not returned
-props.alert && <div className="alert alert-warning alert-dismissible fade show" role="alert">
-<strong>{capitalize(props.alert.type)}</strong>{capitalize(props.alert.msg)}
-</div>
+<div style={{height:'50px'}}>
 
+{props.alert && <div className="alert alert-warning alert-dismissible fade show" role="alert">
+<strong>{capitalize(props.alert.type)}</strong>{capitalize(props.alert.msg)}
+</div>}
+</div>
   )
 }
 
