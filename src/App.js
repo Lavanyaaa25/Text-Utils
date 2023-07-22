@@ -51,7 +51,7 @@ else
             renders the first one that matches the current URL. */}
          
             <Routes>
-            <Route exact path="/" element={<TextForm heading="Enter the text to analyze below" mode={mode} showAlert={showAlert}/>} />
+            <Route exact path="/" element={<TextForm heading="Try TextUtils- Word Counter, Character Counter, Remove extra spaces" mode={mode} showAlert={showAlert}/>} />
           <Route exact path="/about" element={<About mode={mode}/>} />
           {/* use exact to match exactly in case of nested routes */}
         </Routes>
