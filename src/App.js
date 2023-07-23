@@ -46,7 +46,6 @@ else
 <Alert alert={alert}/>
 <div className="container my-3">
 
-
 {/* A <Switch> replaced <Routes> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
          
